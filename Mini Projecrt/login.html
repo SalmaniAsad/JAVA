@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Flipkart</title>
+    <!-- We will use internal CSS for specific login page styling -->
+    <style>
+        :root {
+            --flipkart-blue: #2874F0;
+            --light-bg: #f1f3f6;
+            --flipkart-orange: #FB641B;
+            --text-grey: #878787;
+        }
+
+        body {
+            font-family: Roboto, Arial, sans-serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-wrapper {
+            background-color: white;
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            border-radius: 2px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        /* Left side: Blue Promotional Column */
+        .promo-column {
+            background-color: var(--flipkart-blue);
+            color: white;
+            padding: 40px;
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .promo-column h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .promo-column p {
+            font-size: 18px;
+            color: #DBDBDB;
+            line-height: 1.4;
+        }
+
+        .promo-image {
+            width: 100%;
+            max-width: 180px;
+            margin-top: 40px;
+            /* Placeholder styling */
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Right side: Login Form */
+        .form-column {
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 16px;
+            outline: none;
+            transition: border-bottom-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-bottom-color: var(--flipkart-blue);
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 16px;
+            color: var(--text-grey);
+            pointer-events: none;
+            transition: 0.2s ease all;
+        }
+
+        .input-group input:focus ~ label,
+        .input-group input:not(:placeholder-shown) ~ label {
+            top: -10px;
+            font-size: 12px;
+            color: var(--flipkart-blue);
+        }
+        
+        /* Note text */
+        .note {
+            font-size: 12px;
+            color: var(--text-grey);
+            margin-bottom: 20px;
+        }
+
+        .terms-link {
+            color: var(--flipkart-blue);
+            text-decoration: none;
+        }
+
+        /* Action Buttons */
+        .continue-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--flipkart-orange);
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+            transition: opacity 0.2s;
+        }
+
+        .continue-btn:hover {
+            opacity: 0.9;
+        }
+        
+        .signup-link {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: var(--flipkart-blue);
+            cursor: pointer;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .login-wrapper {
+                max-width: 90%;
+                flex-direction: column;
+                margin: 20px;
+            }
+
+            .promo-column {
+                flex: 1;
+                padding: 20px;
+                order: 1;
+                min-height: 150px;
+                justify-content: flex-start;
+            }
+
+            .form-column {
+                padding: 20px;
+                order: 2;
+            }
+            
+            .promo-image {
+                display: none; /* Hide image on mobile */
+            }
+            
+            .promo-column h2 {
+                font-size: 24px;
+            }
+            .promo-column p {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <!-- Left Side: Promo Column -->
+        <div class="promo-column">
+            <div>
+                <h2>Login</h2>
+                <p>Get access to your Orders, Wishlist and Recommendations.</p>
+            </div>
+            <div class="promo-image">
+                Flipkart Promo Graphic
+            </div>
+        </div>
+
+        <!-- Right Side: Form Column -->
+        <div class="form-column">
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="emailOrMobile" placeholder=" " required>
+                    <label for="emailOrMobile">Enter Email/Mobile number</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" placeholder=" ">
+                    <label for="password">Enter Password (Optional for mobile login)</label>
+                </div>
+
+                <div class="note">
+                    By continuing, you agree to Flipkart's 
+                    <a href="#" class="terms-link">Terms of Use</a> and 
+                    <a href="#" class="terms-link">Privacy Policy</a>.
+                </div>
+
+                <button type="submit" class="continue-btn">Request OTP / Login</button>
+            </form>
+
+            <a href="#" class="signup-link">New to Flipkart? Create an account</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to get a query parameter by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const emailOrMobile = document.getElementById('emailOrMobile').value.trim();
+            const password = document.getElementById('password').value.trim();
+            
+            if (emailOrMobile) {
+                // Simulating successful login logic
+                if (password) {
+                    alert('Simulating successful Login with Email/Mobile and Password...');
+                } else {
+                    alert('Simulating successful OTP Request and Login to: ' + emailOrMobile);
+                }
+                
+                // --- DYNAMIC REDIRECTION LOGIC FIX ---
+                const redirectPage = getQueryParam('redirect');
+                window.location.href = redirectPage || 'index.html'; 
+
+            } else {
+                alert('Please enter your Email or Mobile number.');
+            }
+        });
+        
+        // Simulating the "Create an account" link functionality
+        document.querySelector('.signup-link').addEventListener('click', function(event) {
+             event.preventDefault();
+             alert('Simulating redirect to Signup/Registration page.');
+        });
+    </script>
+</body>
+</html>

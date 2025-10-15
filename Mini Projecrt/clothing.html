@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone - Clothing & Fashion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Include the same listing-specific styles as smartphones.html */
+        .listing-layout { display: flex; gap: 20px; }
+        .sidebar { flex: 0 0 250px; background-color: white; padding: 15px; border-radius: 2px; }
+        .main-listing { flex-grow: 1; }
+        .listing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 15px; 
+            margin-top: 15px;
+        }
+        .filter-group { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        /* Style for product cards on listing pages */
+        .product-card { border: 1px solid #eee; text-align: center; padding: 10px; }
+        .product-card a { text-decoration: none; color: inherit; }
+        .product-card img { width: 100%; height: 150px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    
+    <!-- 1. Header and Search Bar (CORRECTED STRUCTURE) -->
+    <header class="header">
+        <div class="logo"><a href="index.html">Flipkart</a></div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button class="search-btn">Search</button>
+        </div>
+        <nav class="user-nav">
+            <a href="cart.html" class="nav-link cart-link">Cart (0)</a>
+            <a href="login.html?redirect=index.html" class="nav-link">Login</a>
+        </nav>
+    </header>
+
+    <!-- 2. Main Category/Navigation Bar -->
+    <nav class="main-categories">
+        <a href="smartphones.html">Mobiles</a>
+        <a href="tv.html">TVs & Appliances</a>
+        <a href="clothing.html">Fashion</a>
+    </nav>
+
+    <main class="container listing-layout">
+
+        <!-- Main Product Area -->
+        <section class="main-listing">
+            <h2>Clothing & Fashion</h2>
+            <div class="listing-grid">
+
+                <div class="product-card"><div class="product-info"><img src="polo.jpg" alt="C1"><h4>Men's Cotton T-Shirt</h4><p class="price">₹499</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Jeans.jpg" alt="C2"><h4>Slim Fit Jeans</h4><p class="price">₹1,299</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="kurta.jpg" alt="C3"><h4>Women's Kurti Set</h4><p class="price">₹1,850</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="sneakers.jpg" alt="C4"><h4>Running Shoes</h4><p class="price">₹2,499</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="shirt.jpg" alt="C5"><h4>Casual Shirt</h4><p class="price">₹799</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="socks.jpg" alt="C6"><h4>Ankle Length Socks (Pack of 5)</h4><p class="price">₹349</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="saree.jpg" alt="C7"><h4>Premium Saree</h4><p class="price">₹4,500</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="kids_tshirt.jpg" alt="C8"><h4>Kids T-Shirt</h4><p class="price">₹299</p></div><button class="add-to-cart">Add</button></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. Footer -->
+    <footer class="footer">
+        <div class="footer-col"><h4>ABOUT</h4><ul><li><a href="#">Contact Us</a></li></ul></div>
+        <div class="footer-col"><h4>HELP</h4><ul><li><a href="#">Payments</a></li></ul></div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

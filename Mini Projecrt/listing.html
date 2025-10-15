@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone - Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add some specific styles for the listing page layout */
+        .listing-layout { display: flex; gap: 20px; }
+        .sidebar { flex: 0 0 250px; background-color: white; padding: 15px; border-radius: 2px; }
+        .main-listing { flex-grow: 1; }
+        .listing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 15px; 
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="user-nav">
+            <a href="cart.html" class="nav-link cart-link">Cart (0)</a>
+        </nav>
+    </header>
+    <nav class="main-categories">...</nav>
+
+    <main class="container listing-layout">
+        
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <label><input type="checkbox"> Samsung</label><br>
+                <label><input type="checkbox"> Apple</label>
+            </div>
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <p>Min <input type="number" value="1000"> - Max <input type="number" value="50000"></p>
+            </div>
+            </aside>
+
+        <section class="main-listing">
+            <h2>Electronics - Mobiles & Laptops</h2>
+            <div class="listing-grid">
+                
+                <div class="product-card">
+                    <div class="product-info">
+                        <img src="placeholder_product.jpg" alt="Item A">
+                        <h4>Item A (Listing Page)</h4>
+                        <p class="price">₹12,000</p>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-info">
+                        <img src="placeholder_product.jpg" alt="Item B">
+                        <h4>Item B (Listing Page)</h4>
+                        <p class="price">₹500</p>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="footer"></footer>
+    <script src="script.js"></script>
+</body>
+</html>
