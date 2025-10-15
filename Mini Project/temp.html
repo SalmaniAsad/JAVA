@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - All Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Shared Listing Styles */
+        .listing-layout { display: flex; gap: 20px; }
+        .sidebar { flex: 0 0 250px; background-color: white; padding: 15px; border-radius: 2px; }
+        .main-listing { flex-grow: 1; }
+        .listing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 15px; 
+            margin-top: 15px;
+            /* Ensure the product grid is properly contained */
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 2px;
+        }
+        .filter-group { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .product-card { 
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
+        }
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-card a { text-decoration: none; color: inherit; }
+        .product-card img { width: 100%; height: 150px; object-fit: contain; background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    
+    <!-- 1. Header (Ensure cart links are correct) -->
+    <header class="header">
+        <div class="logo"><a href="index.html">Flipkart</a></div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button class="search-btn">Search</button>
+        </div>
+        <nav class="user-nav">
+            <a href="cart.html" class="nav-link cart-link">Cart (0)</a>
+        </nav>
+    </header>
+
+    <!-- 2. Main Category/Navigation Bar -->
+    <nav class="main-categories">
+        <a href="smartphones.html">Mobiles</a>
+        <a href="tv.html">TVs & Appliances</a>
+        <a href="clothing.html">Fashion</a>
+    </nav>
+
+    <main class="container listing-layout">
+        
+        <!-- Main Product Area -->
+        <section class="main-listing">
+            <h2>All Electronics & Home Appliances (15 Products Shown)</h2>
+            <div class="listing-grid">
+
+                <div class="product-card"><div class="product-info"><img src="a56.webp" alt="P2"><h4>Samsung Galaxy A56</h4><p class="price">₹38,499</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="cmf phone 2 pro.webp" alt="P3"><h4>CMF Phone 2 Pro</h4><p class="price">₹17,999</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="neo 10.webp" alt="P4"><h4>IQOO Neo 10</h4><p class="price">₹40,000</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="s25.webp" alt="P5"><h4>Samsung Galaxy S25</h4><p class="price">₹75,999</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="k13x 5g.webp" alt="P6"><h4>OPPO K13x 5G</h4><p class="price">₹10,000</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="16 pro.webp" alt="P7"><h4>IPhone 16 Pro</h4><p class="price">₹84,999</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="spark go 2.webp" alt="P8"><h4>Tecno Spark Go 2</h4><p class="price">₹6,999</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="s25 ultra.jpeg" alt="P1"><h4>Samsung Galaxy S25 Ultra</h4><p class="price">₹1,07,799</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="smart_65_inch_uhd_tv.jpg" alt="A1"><h4>Smart 65 Inch UHD TV</h4><p class="price">₹65,000</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Double Door Fridge 300L.webp" alt="A2"><h4>Double Door Fridge 300L</h4><p class="price">₹34,500</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Front Load Washer 8KG.webp" alt="A3"><h4>Front Load Washer 8KG</h4><p class="price">₹29,999</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Entry Level 32 Inch TV.webp" alt="A4"><h4>Entry Level 32 Inch TV</h4><p class="price">₹12,499</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Inverter AC 1.5 Ton.webp" alt="A5"><h4>Inverter AC 1.5 Ton</h4><p class="price">₹35,000</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Microwave Oven 20L.webp" alt="A6"><h4>Microwave Oven 20L</h4><p class="price">₹4,999</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Side-by-Side Fridge.webp" alt="A7"><h4>Side-by-Side Fridge</h4><p class="price">₹75,000</p></div><button class="add-to-cart">Add</button></div>
+                <div class="product-card"><div class="product-info"><img src="Air Cooler XL.jpeg" alt="A8"><h4>Air Cooler XL</h4><p class="price">₹6,800</p></div><button class="add-to-cart">Add</button></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. Footer -->
+    <footer class="footer">
+        <div class="footer-col"><h4>ABOUT</h4><ul><li><a href="#">Contact Us</a></li></ul></div>
+        <div class="footer-col"><h4>HELP</h4><ul><li><a href="#">Payments</a></li></ul></div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+### 2. Update Home Page (`index.html`)
+
+We need to update the "VIEW ALL" link on your home page to point to this new file.
+
+**Action:** In your `index.html` file, find the "Best of Electronics" section and update the `href`:
+
+**Find this line:**
+
+```html
+<h3>Best of Electronics <a href="smartphones.html" class="view-all">VIEW ALL</a></h3>
+```
+
+**Change it to this:**
+
+```html
+<h3>Best of Electronics <a href="temp.html" class="view-all">VIEW ALL</a></h3>

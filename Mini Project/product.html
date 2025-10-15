@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - Product Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for the product detail layout */
+        .product-detail-container { 
+            display: flex; 
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 2px;
+        }
+        .image-gallery { flex: 0 0 400px; padding: 10px; text-align: center; }
+        .main-image { width: 100%; height: 400px; object-fit: contain; background-color: #f9f9f9; }
+        .details-info { flex-grow: 1; padding: 0 40px; }
+        .details-info h1 { font-size: 28px; margin-bottom: 5px; }
+        .rating { color: #388e3c; font-weight: bold; margin-bottom: 15px; }
+        .detail-price { font-size: 32px; color: #212121; font-weight: 500; margin-bottom: 10px; }
+        .detail-price span { font-size: 20px; color: #878787; text-decoration: line-through; margin-left: 10px; }
+        .action-buttons { margin-top: 30px; }
+        .buy-now-btn, .detail-cart-btn { padding: 15px 30px; font-size: 16px; font-weight: bold; border: none; cursor: pointer; border-radius: 2px; margin-right: 15px; }
+        .buy-now-btn { background-color: #fb641b; color: white; }
+        .detail-cart-btn { background-color: #ff9800; color: white; }
+    </style>
+</head>
+<body>
+    <header class="header">...
+        <nav class="user-nav">
+            <a href="cart.html" class="nav-link cart-link">Cart (0)</a>
+        </nav>
+    </header>
+    <nav class="main-categories"></nav>
+
+    <main class="container">
+        
+        <div class="product-detail-container">
+            
+            <div class="image-gallery">
+                <img src="placeholder_product.jpg" alt="Product Image" class="main-image">
+                </div>
+
+            <div class="details-info">
+                <h1> (6GB RAM, 128GB Storage, Blue)</h1>
+                <div class="rating">4.5 ★ (1,234 Ratings)</div>
+                
+                <p class="detail-price">
+                    ₹34,999 
+                    <span>₹45,000</span>
+                    <span style="color: #388e3c; font-size: 20px; margin-left: 20px;">22% Off</span>
+                </p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
+                    <li>SnapDragon 8 Gen 3, Next-generation 5G</li>
+                    <li>12MP Triple Camera System</li>
+                    <li>1 Year Warranty</li>
+                </ul>
+
+                <div class="action-buttons">
+                    <button class="detail-cart-btn" onclick="alert('Item added to cart!');">
+                        🛒 ADD TO CART
+                    </button>
+                    <button class="buy-now-btn" onclick="alert('Proceeding to checkout...');">
+                        ⚡ BUY NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">...</footer>
+    <script src="script.js"></script>
+</body>
+</html>
